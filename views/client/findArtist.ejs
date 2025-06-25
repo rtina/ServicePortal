@@ -1,0 +1,163 @@
+<div class="find-artist-container">
+    <div class="header">
+        <h1>Browse Artists</h1>
+        <p>Discover talented animators and motion designers</p>
+    </div>
+
+    <div class="content-wrapper">
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <h2>Filters</h2>
+            
+            <!-- Search -->
+            <div class="filter-group">
+                <h3>Search</h3>
+                <div class="search-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search artists...">
+                </div>
+            </div>
+
+            <!-- Category -->
+            <div class="filter-group">
+                <h3>Category</h3>
+                <select class="form-select">
+                    <option selected>All Categories</option>
+                    <option>2D Animation</option>
+                    <option>3D Animation</option>
+                    <option>Motion Graphics</option>
+                </select>
+            </div>
+
+            <!-- Skills -->
+            <div class="filter-group">
+                <h3>Skills</h3>
+                <div class="skills-list">
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> After Effects
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Premiere Pro
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Photoshop
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Illustrator
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Maya
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Blender
+                    </label>
+                </div>
+            </div>
+
+            <!-- Hourly Rate -->
+            <div class="filter-group">
+                <h3>Hourly Rate: $0 - $200</h3>
+                <div class="rate-inputs">
+                    <input type="number" placeholder="0" min="0">
+                    <input type="number" placeholder="200" max="200">
+                </div>
+            </div>
+
+            <!-- Minimum Rating -->
+            <div class="filter-group">
+                <h3>Minimum Rating</h3>
+                <select class="form-select">
+                    <option selected>Any Rating</option>
+                    <option>4.5+</option>
+                    <option>4.0+</option>
+                    <option>3.5+</option>
+                </select>
+            </div>
+
+            <!-- Availability -->
+            <div class="filter-group">
+                <label class="availability-checkbox">
+                    <input type="checkbox"> Available now only
+                </label>
+            </div>
+        </div>
+
+        <!-- Artists Grid Section -->
+        <div class="artists-section">
+            <div class="artists-header">
+                <span>4 artists found</span>
+                <div class="view-controls">
+                    <select class="form-select sort-select">
+                        <option selected>Best Match</option>
+                        <option>Highest Rated</option>
+                        <option>Lowest Price</option>
+                    </select>
+                    <div class="view-toggles">
+                        <button class="view-btn active"><i class="fas fa-th-large"></i></button>
+                        <button class="view-btn"><i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="artists-grid">
+                <!-- Artist Card 1 -->
+                <div class="artist-card">
+                    <div class="artist-header">
+                        <img src="https://via.placeholder.com/50" alt="Sarah Chen" class="artist-avatar">
+                        <div class="artist-info">
+                            <h3>Sarah Chen</h3>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Los Angeles, CA
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9 (127)</span>
+                        </div>
+                    </div>
+                    <div class="artist-status available">Available</div>
+                    <p class="artist-description">Award-winning 2D animator with 8+ years of experience in character animation...</p>
+                    <div class="artist-skills">
+                        <span class="skill-tag">2D Animation</span>
+                        <span class="skill-tag">Character Animation</span>
+                        <span class="skill-tag">Motion Graphics</span>
+                    </div>
+                    <div class="artist-footer">
+                        <div class="price">Starting from $500</div>
+                        <button class="view-profile-btn">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Artist Card 2 -->
+                <div class="artist-card">
+                    <div class="artist-header">
+                        <img src="https://via.placeholder.com/50" alt="Marcus Rivera" class="artist-avatar">
+                        <div class="artist-info">
+                            <h3>Marcus Rivera</h3>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                New York, NY
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8 (89)</span>
+                        </div>
+                    </div>
+                    <div class="artist-status available">Available</div>
+                    <p class="artist-description">Passionate 3D animator and visual effects artist. I create stunning 3D animations for games and film.</p>
+                    <div class="artist-skills">
+                        <span class="skill-tag">3D Animation</span>
+                        <span class="skill-tag">VFX</span>
+                        <span class="skill-tag">Product Visualization</span>
+                    </div>
+                    <div class="artist-footer">
+                        <div class="price">Starting from $750</div>
+                        <button class="view-profile-btn">View Profile</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
