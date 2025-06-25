@@ -112,7 +112,8 @@ section {
 }
 
 .sign-up-btn:hover {
-  background-color: #7424c9;
+    background-color: #b27fe9;
+    color: white !important;
 }
 
 /* === Responsive Navbar === */
