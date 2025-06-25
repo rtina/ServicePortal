@@ -28,6 +28,7 @@ app.get("/landingpage", (req,res)=>{
 })
 
 
+
 app.listen(8082, ()=>{
-    console.log("Server is listening to the port no 8083");
+    console.log("Server is listening to the port no 8082");
 });
