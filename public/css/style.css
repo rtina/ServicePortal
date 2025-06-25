@@ -1,41 +1,29 @@
-
-
 @import 'components/findArtist.css';
-/* === GLOBAL RESET === */
-
+/* =================== GLOBAL RESET ================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+body {
   font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #fff;
   overflow-x: hidden;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
+.container-fluid{
   padding: 0 !important;
 }
 
-section {
-  width: 100%;
-  padding: 3rem 1rem;
-  margin: 0 auto;
-}
 
-/* === CONTAINER ADJUSTMENTS === */
-.container {
-  margin: 0;
-  padding: 0;
-}
-
-/* =================== Navbar ================== */
-.navbar {
+/* =================== NAVBAR ================== */
+.navbar-main {
   padding: 0.75rem 1.5rem;
   border-bottom: 1px solid #eee;
   background-color: #fff;
@@ -43,7 +31,7 @@ section {
   width: 100%;
 }
 
-.navbar-brand {
+.navbar-main .navbar-brand {
   font-size: 1.5rem;
   font-weight: 600;
   color: #8a2be2 !important;
@@ -51,7 +39,7 @@ section {
   align-items: center;
 }
 
-.navbar-logo {
+.navbar-main .navbar-logo {
   background-color: #7b3fe4;
   color: white;
   font-weight: bold;
@@ -65,31 +53,31 @@ section {
   margin-right: 0.8rem;
 }
 
-.search-container {
+.navbar-main .search-container-nav {
   flex-grow: 1;
   max-width: 600px;
   margin: 0 2rem;
 }
 
-.search-box {
+.navbar-main .search-box-nav {
   position: relative;
-  width: 100%;
+  width: 80%;
 }
 
-.search-box .form-control {
+.navbar-main .search-box-nav .form-control {
   padding-left: 2.5rem;
   border-radius: 25px;
   border: 1px solid #e0e0e0;
   background-color: #f8f9fa;
 }
 
-.search-box .form-control:focus {
+.navbar-main .search-box-nav .form-control:focus {
   box-shadow: 0 0 0 0.2rem rgba(138, 43, 226, 0.25);
   border-color: #8a2be2;
   background-color: white;
 }
 
-.search-icon {
+.navbar-main .search-icon {
   position: absolute;
   left: 1rem;
   top: 50%;
@@ -97,47 +85,59 @@ section {
   color: #6c757d;
 }
 
-.navbar-nav .nav-link {
-  color: #4a4a4a !important;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  transition: color 0.2s ease;
+.navbar-main .navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Add spacing between nav links */
 }
 
-.navbar-nav .nav-link:hover {
+.navbar-main .navbar-nav .nav-link {
+  color: #4a4a4a !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Increased horizontal padding */
+  transition: color 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar-main .navbar-nav .nav-link:hover {
   color: #8a2be2 !important;
 }
 
-.sign-up-btn {
+
+.navbar-main .sign-up-btn {
   background-color: #8a2be2 !important;
   color: white !important;
-  border-radius: 20px;
-  padding: 0.5rem 1.5rem;
+  border-radius: 999px; /* Perfect pill shape */
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
 }
 
-.sign-up-btn:hover {
-    background-color: #b27fe9;
-    color: white !important;
+.navbar-main .sign-up-btn:hover {
+  background-color: #b27fe9;
+  color: white !important;
 }
 
-/* === Responsive Navbar === */
+
 @media (max-width: 991.98px) {
-  .search-container {
+  .navbar-main .search-container-nav {
     margin: 1rem 0;
   }
-
-  .navbar-nav {
+  .navbar-main .navbar-nav {
     margin-top: 1rem;
   }
-
-  .sign-up-btn {
+  .navbar-main .sign-up-btn {
     margin: 0.5rem 0;
     text-align: center;
   }
 }
 
-/* =================== Footer ================== */
-.footer-section {
+/* =================== FOOTER ================== */
+.footer-main {
   margin-top: auto;
   background-color: #0d111c;
   border-top: 4px solid #7b3fe4;
@@ -147,7 +147,7 @@ section {
   padding: 2rem 1rem 1rem;
 }
 
-.footer-logo {
+.footer-main .footer-logo {
   background-color: #7b3fe4;
   color: white;
   font-weight: bold;
@@ -160,50 +160,93 @@ section {
   font-size: 1.2rem;
 }
 
-.footer-icons a {
+.footer-main .footer-icons a {
   color: #b0b3b8;
   font-size: 1.2rem;
   margin-right: 0.8rem;
   transition: color 0.3s ease;
 }
 
-.footer-icons a:hover {
+.footer-main .footer-icons a:hover {
   color: #ffffff;
 }
 
-.footer-links li {
+.footer-main .footer-links li {
   margin-bottom: 0.5rem;
 }
 
-.footer-links a {
+.footer-main .footer-links a {
   color: #b0b3b8;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-main .footer-links a:hover {
   color: #ffffff;
 }
 
-.footer-divider {
+.footer-main .footer-divider {
   border-color: #1a1d29;
 }
 
-.footer-policy-links a {
+.footer-main .footer-policy-links a {
   margin-left: 1.2rem;
   color: #b0b3b8;
   text-decoration: none;
 }
 
-.footer-policy-links a:first-child {
+.footer-main .footer-policy-links a:first-child {
   margin-left: 0;
 }
 
-.footer-policy-links a:hover {
+.footer-main .footer-policy-links a:hover {
   color: #ffffff;
 }
 
-/* =================== Landing Sections ================== */
+/* =================== LANDING PAGE ================== */
+/* ======= General Reset for Landing Sections ======= */
+section[class^="landing-"] {
+  width: 100%;
+  padding: 4rem 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ==== hero section ==== */
+.hero-section {
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Purple-Blue gradient */
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .text-gradient {
+  background: linear-gradient(to right, #9d4edd, #3f37c9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section .btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero-section .btn-outline-light:hover {
+  background-color: #fff;
+  color: #6a11cb;
+}
+
+.hero-section .btn-light.text-purple {
+  color: #6a11cb;
+}
+
+.hero-section .btn-light.text-purple:hover {
+  background-color: #e0e0e0;
+  color: #3f37c9;
+}
+
+
+/* ======= Tag Buttons ======= */
 .tag {
   background: #f1f3f6;
   padding: 6px 14px;
@@ -214,53 +257,83 @@ section {
   display: inline-block;
 }
 
+/* ======= Buttons ======= */
 .btn-primary-purple {
-  background: #9333ea;
-  color: white;
-  border: none;
-  transition: 0.3s ease;
+  background-color: #9333ea !important;
+  color: white !important;
+  border: none !important;
+  transition: background-color 0.3s ease 1;
 }
+
 .btn-primary-purple:hover {
-  background: #7e22ce;
+  background-color: #7e22ce !important;
+  color: white !important;
 }
 
 .btn-outline-purple {
-  color: #9333ea;
-  border: 1px solid #9333ea;
-  background-color: transparent;
-  transition: 0.3s;
-}
-.btn-outline-purple:hover {
-  background-color: #9333ea;
-  color: white;
+  color: #9333ea !important;
+  border: 1px solid #9333ea !important;
+  background-color: transparent !important;
+  transition: 0.3s ease !important;
 }
 
-/* === Search Section === */
-.search-section h2 {
+.btn-outline-purple:hover {
+  background-color: #9333ea !important;
+  color: white !important;
+}
+
+.btn-light.text-purple {
+  color: #9333ea !important;
+  background-color: #fff !important;
+  border: none !important;
+}
+
+.btn-light.text-purple:hover {
+  background-color: #f3e8ff !important;
+}
+
+.btn-outline-light {
+  color: #fff   !important;
+  border: 1px solid #fff !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff !important;
+  color: #9333ea !important;
+}
+
+/* ======= Search Section ======= */
+.landing-search-section h2 {
   font-size: 2rem;
 }
-.search-section .search-box {
+
+.landing-search-section .search-box {
   max-width: 800px;
   margin: 0 auto;
 }
-.search-input {
+
+.landing-search-section .search-input {
   border-radius: 12px;
   overflow: hidden;
+  width: 100%;
 }
-.search-input .form-control {
+
+.landing-search-section .form-control {
   border: none;
   box-shadow: none;
 }
-.search-input .input-group-text {
+
+.landing-search-section .input-group-text {
   background: transparent;
   border: none;
 }
 
-/* === How It Works Section === */
-.how-it-works {
+/* ======= How It Works Section ======= */
+.landing-how-it-works {
   background-color: #f9f9f9;
 }
-.icon-circle {
+
+.landing-how-it-works .icon-circle {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -270,93 +343,99 @@ section {
   justify-content: center;
   margin: 0 auto;
 }
-.icon-circle.purple {
-  background: #f3e8ff;
+
+.landing-how-it-works .icon-circle.purple {
+  background-color: #f3e8ff;
   color: #9333ea;
 }
-.icon-circle.blue {
-  background: #e0f2fe;
+
+.landing-how-it-works .icon-circle.blue {
+  background-color: #e0f2fe;
   color: #3b82f6;
 }
-.icon-circle.green {
-  background: #dcfce7;
+
+.landing-how-it-works .icon-circle.green {
+  background-color: #dcfce7;
   color: #22c55e;
 }
 
-/* === Featured Artists === */
-.card {
+/* ======= Featured Artists Section ======= */
+.landing-featured-artists .card {
   border-radius: 16px;
   transition: 0.3s ease-in-out;
 }
-.card:hover {
+
+.landing-featured-artists .card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
-.card img {
+
+.landing-featured-artists .card img {
   object-fit: cover;
 }
-.card .btn {
+
+.landing-featured-artists .card .btn {
   font-size: 0.875rem;
 }
 
-/* === Services Section === */
-.bg-light {
-  background-color: #f8f9fa !important;
+/* ======= Popular Services Section ======= */
+.landing-popular-services .card {
+  border-radius: 16px;
+  transition: 0.3s ease-in-out;
 }
-.card .tag {
+
+.landing-popular-services .card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.landing-popular-services .card .tag {
   background-color: #e8efff;
   font-size: 0.75rem;
 }
 
-/* === Testimonials === */
-.testimonials .card {
+/* ======= Testimonials Section ======= */
+.landing-testimonials .card {
   border-radius: 16px;
+  text-align: left;
 }
-.testimonials .text-warning i {
+
+.landing-testimonials .text-warning i {
   font-size: 1rem;
 }
 
-/* === CTA Section === */
-.cta-section {
+/* ======= CTA Section ======= */
+.landing-cta-section {
   background: linear-gradient(90deg, #9333ea, #7e22ce);
   color: white;
   text-align: center;
-  padding: 4rem 1rem;
 }
-.cta-section h2 {
+
+.landing-cta-section h2 {
   font-size: 2rem;
 }
-.cta-section p {
+
+.landing-cta-section p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
-.cta-section .btn {
+
+.landing-cta-section .btn {
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
 }
-.btn-light.text-purple {
-  color: #9333ea;
-  background-color: #fff;
-  border: none;
-}
-.btn-light.text-purple:hover {
-  background-color: #f3e8ff;
-}
-.btn-outline-light {
-  color: #fff;
-  border: 1px solid #fff;
-}
-.btn-outline-light:hover {
-  background-color: #fff;
-  color: #9333ea;
-}
 
-/* === Utilities === */
+/* ======= Utility Classes ======= */
 .text-purple {
   color: #9333ea;
 }
+
 .fw-bold {
   font-weight: 700 !important;
 }
+
 .fw-semibold {
   font-weight: 600 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
 }
