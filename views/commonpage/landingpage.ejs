@@ -1,0 +1,161 @@
+<%- layout("/layouts/boilerplate") %>
+
+
+<!-- Search Section -->
+<section class="search-section text-center py-5">
+    <h2 class="fw-bold mb-2">What are you looking for?</h2>
+    <p class="text-muted mb-4">Search thousands of services or browse by category</p>
+    <div class="search-box d-flex justify-content-center">
+      <div class="input-group search-input shadow">
+        <span class="input-group-text bg-white border-0"><i class="bi bi-search"></i></span>
+        <input type="text" class="form-control border-0" placeholder="Search for animation services, artists, or skills..." />
+        <button class="btn btn-primary-purple">Search</button>
+      </div>
+    </div>
+    <div class="mt-4 tag-buttons d-flex flex-wrap justify-content-center gap-2">
+      <span class="tag">2D Animation</span>
+      <span class="tag">3D Animation</span>
+      <span class="tag">Motion Graphics</span>
+      <span class="tag">Character Animation</span>
+      <span class="tag">VFX</span>
+      <span class="tag">Product Visualization</span>
+      <span class="tag">Explainer Videos</span>
+      <span class="tag">Game Animation</span>
+    </div>
+  </section>
+  
+  <!-- How It Works Section -->
+  <section class="how-it-works text-center py-5 bg-light">
+    <h2 class="fw-bold">How It Works</h2>
+    <p class="text-muted mb-5">Get your project done in three simple steps</p>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="icon-circle purple"><i class="bi bi-search"></i></div>
+          <h5 class="fw-bold mt-3">1. Find Your Artist</h5>
+          <p class="text-muted">Browse through our curated list of professional animators and find the perfect match for your project needs.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-circle blue"><i class="bi bi-camera-video"></i></div>
+          <h5 class="fw-bold mt-3">2. Start Your Project</h5>
+          <p class="text-muted">Discuss your vision, set milestones, and collaborate with your chosen artist throughout the creative process.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-circle green"><i class="bi bi-stars"></i></div>
+          <h5 class="fw-bold mt-3">3. Get Results</h5>
+          <p class="text-muted">Receive your stunning animation on time and exactly as envisioned. Payment is secured until you're satisfied.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Artists -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="fw-bold">Featured Artists</h2>
+          <p class="text-muted">Discover top-rated animation professionals</p>
+        </div>
+        <a href="#" class="btn btn-outline-purple">View All Artists <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="row g-4">
+        <% ["Sarah Chen", "Marcus Rivera", "Emma Thompson"].forEach((name, i) => { %>
+          <div class="col-md-4">
+            <div class="card shadow-sm p-3 border-0 rounded-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img src="https://via.placeholder.com/50" class="rounded-circle" alt="<%= name %>">
+                <div>
+                  <h6 class="mb-0 fw-bold"><%= name %></h6>
+                  <small class="text-muted"><%= i === 0 ? "Los Angeles, CA" : i === 1 ? "New York, NY" : "London, UK" %></small>
+                </div>
+                <div class="ms-auto text-end">
+                  <span class="text-warning"><i class="bi bi-star-fill"></i> <%= 4.9 - i * 0.1 %></span><br>
+                  <span class="badge rounded-pill <%= i === 2 ? 'bg-warning text-dark' : 'bg-success' %>"><%= i === 2 ? 'Busy' : 'Available' %></span>
+                </div>
+              </div>
+              <p class="text-muted small">Creative motion designer with 8+ years experience in brand animations...</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="tag">2D Animation</span>
+                <span class="tag">Character Animation</span>
+                <span class="tag">Motion Graphics</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="fw-bold">Starting from <span class="text-dark">$<%= 500 + i * 250 %></span></div>
+                <a href="#" class="btn btn-primary-purple">View Profile</a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Popular Services -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="fw-bold">Popular Services</h2>
+          <p class="text-muted">Ready-to-order animation services</p>
+        </div>
+        <a href="#" class="btn btn-outline-purple">View All Services <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-3 shadow-sm border-0 rounded-4">
+            <img src="https://via.placeholder.com/80" class="rounded mb-3" />
+            <h6 class="fw-bold">Custom 2D Character Animation</h6>
+            <p class="small text-muted">Professional 2D character animation for your project...</p>
+            <p class="small"><i class="bi bi-clock"></i> 14 days &nbsp; <i class="bi bi-arrow-repeat"></i> 3 revisions</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="tag">2D</span><span class="tag">Character</span><span class="tag">Animation</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <strong>$1200</strong>
+              <a href="#" class="btn btn-primary-purple">View Details</a>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat 2x with slight content tweaks for the other two cards -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold">What Our Clients Say</h2>
+      <p class="text-muted mb-5">Join thousands of satisfied customers</p>
+      <div class="row g-4">
+        <% ["Jennifer Martinez", "David Chen", "Lisa Thompson"].forEach((name, i) => { %>
+          <div class="col-md-4">
+            <div class="card p-4 shadow-sm border-0 rounded-4">
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="fst-italic">"Amazing animation service! Really brought our vision to life."</p>
+              <div class="d-flex align-items-center gap-2 mt-3">
+                <img src="https://via.placeholder.com/40" class="rounded-circle" />
+                <div>
+                  <div class="fw-bold"><%= name %></div>
+                  <small class="text-muted"><%= i === 0 ? "TechStart Inc." : i === 1 ? "Creative Agency" : "EduTech Solutions" %></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="cta-section text-center text-white py-5">
+    <h2 class="fw-bold mb-3">Ready to Bring Your Vision to Life?</h2>
+    <p class="mb-4">Join thousands of creators who trust AnimateHub for their animation needs</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="#" class="btn btn-light text-purple fw-semibold px-4 py-2 rounded">Get Started Today</a>
+      <a href="#" class="btn btn-outline-light fw-bold px-4 py-2 rounded">Browse Artists</a>
+    </div>
+  </section>
+  
