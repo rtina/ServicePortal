@@ -31,6 +31,6 @@ app.get("/browse", (req,res)=>{
     res.render("client/findArtist.ejs");
 })
 
-app.listen(8082, ()=>{
+app.listen(4000, ()=>{
     console.log("Server is listening to the port no 8083");
 });

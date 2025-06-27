@@ -1,4 +1,5 @@
 @import 'components/findArtist.css';
+@import 'component/gallery.css';
 /* =================== GLOBAL RESET ================== */
 * {
   margin: 0;
