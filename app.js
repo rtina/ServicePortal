@@ -31,6 +31,10 @@ app.get("/browse", (req,res)=>{
     res.render("client/findArtist.ejs");
 })
 
+app.get("/profile" , (req,res)=>{
+    res.render("commonpage/profile.ejs");
+});
+
 app.listen(4000, ()=>{
     console.log("Server is listening to the port no 4000");
 });

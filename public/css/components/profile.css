@@ -1,0 +1,213 @@
+/* ========== Profile Header Section ========== */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .profile-info {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .profile-details h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .rating-location {
+    display: flex;
+    gap: 1rem;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .profile-tags {
+    margin-bottom: 1rem;
+  }
+  
+  .tag {
+    background: #eee1fc;
+    color: #6b3eff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    margin-right: 5px;
+    border-radius: 12px;
+    display: inline-block;
+    font-weight: 600;
+  }
+  
+  .profile-bio {
+    margin-bottom: 0.5rem;
+  }
+  
+  .availability-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .available {
+    background: #c4f4cd;
+    color: #1b8e3f;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+  
+  /* ========== CTA Section ========== */
+  .profile-cta {
+    text-align: right;
+  }
+  
+  .profile-cta h3 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  
+  .profile-cta p {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0.3rem 0;
+  }
+  
+  .btn-primary {
+    background-color: #8b3dff;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-outline {
+    background: white;
+    border: 2px solid #8b3dff;
+    color: #8b3dff;
+  }
+  
+  .btn-outline:hover {
+    background: #f3eaff;
+  }
+  
+  /* ========== Portfolio Navigation ========== */
+  .portfolio-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .portfolio-nav {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .portfolio-nav a {
+    text-decoration: none;
+    color: #6b3eff;
+  }
+  
+  .portfolio-filters {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-btn {
+    border: none;
+    background: #eee;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: #8b3dff;
+    color: #fff;
+  }
+  
+  /* ========== Portfolio Cards ========== */
+  .portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .portfolio-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .portfolio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .card-info {
+    padding: 1rem;
+  }
+  
+  .card-info h4 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+  }
+  
+  .card-info p {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+  
+  .video-preview {
+    position: relative;
+  }
+  
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 50%;
+  }
