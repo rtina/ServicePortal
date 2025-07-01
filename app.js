@@ -35,6 +35,10 @@ app.get("/profile" , (req,res)=>{
     res.render("commonpage/profile.ejs");
 });
 
+app.get("/servicepage" , (req,res)=>{
+    res.render("client/service.ejs");
+})
+
 app.listen(4000, ()=>{
     console.log("Server is listening to the port no 4000");
 });
