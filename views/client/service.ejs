@@ -1,20 +1,22 @@
 <%- layout('/layouts/boilerplate') %>
 
-<div class="container">
-    <h2>Browse by Category</h2>
-    <div class="categories">
-      <button class="tab active" data-category="3d">3D Animation</button>
-      <button class="tab" data-category="2d">2D Animation</button>
-      <button class="tab" data-category="motion">Motion Graphics</button>
-      <button class="tab" data-category="character">Character Animation</button>
-      <button class="tab" data-category="vfx">VFX</button>
-      <button class="tab" data-category="product">Product Visualization</button>
-      <button class="tab" data-category="explainer">Explainer Videos</button>
-      <button class="tab" data-category="game">Game Animation</button>
-    </div>
+<div class="container-services">
+  <h2>Browse by Category</h2>
 
-    < class="main-content">
-    <div class="filters">
+  <div class="categories">
+    <button class="tab active" data-category="3d">3D Animation</button>
+    <button class="tab" data-category="2d">2D Animation</button>
+    <button class="tab" data-category="motion">Motion Graphics</button>
+    <button class="tab" data-category="character">Character Animation</button>
+    <button class="tab" data-category="vfx">VFX</button>
+    <button class="tab" data-category="product">Product Visualization</button>
+    <button class="tab" data-category="explainer">Explainer Videos</button>
+    <button class="tab" data-category="game">Game Animation</button>
+  </div>
+
+  <div class="main-content" style="display: flex; gap: 20px; margin-top: 30px;">
+    <!-- Sidebar Filters -->
+    <div class="filters" style="flex: 1; max-width: 250px;">
       <div class="filter-sidebar">
         <div class="filter-section">
           <h3>Search Services</h3>
@@ -58,13 +60,17 @@
         <button class="clear-filters-btn">Clear All Filters</button>
       </div>
     </div>
-  </div>
-    <div id="service-list" class="services"></div>
-  
-    <button id="load-more">Load More Services</button>
-  <br>
-  
 
-  <script src="service.js"></script>
-</body>
-</html>
+    <!-- Services Display -->
+    <div id="service-list" class="services" style="flex: 3; display: flex; flex-wrap: wrap; gap: 20px;">
+      <!-- Service cards will appear here -->
+    </div>
+  </div>
+
+  <!-- Load More Button -->
+  <div style="text-align: center; margin-top: 30px;">
+    <button id="load-more">Load More Services</button>
+  </div>
+</div>
+
+<script src="/js/service.js"></script>
