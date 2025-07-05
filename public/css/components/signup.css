@@ -1,0 +1,138 @@
+:root {
+    --primary: #9333ea;
+    --primary-light: #a855f7;
+    --text: #111827;
+    --subtext: #6b7280;
+    --input-bg: #fff;
+    --input-border: #d1d5db;
+    --radius: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f9fafb;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+  }
+  
+  .register-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .login-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--subtext);
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .register-form .form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  .register-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  .register-form input,
+  .register-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    background: var(--input-bg);
+  }
+  
+  .password-group .password-wrapper {
+    position: relative;
+  }
+  
+  .password-wrapper i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .form-group.checkbox label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--subtext);
+  }
+  
+  .form-group.checkbox a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    background: var(--primary);
+    border: none;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .submit-btn:hover {
+    background: var(--primary-light);
+  }
+  

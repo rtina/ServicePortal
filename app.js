@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const ejsMate = require("ejs-mate");
 const path = require("path");
 const app = express();
-
+const dbUrl = "mongodb://127.0.0.1:27017/ServicePortal";
+const artistProfileSchema = require("./models/artistProfile.js");
 //====================== connection to monngodb=====================
 async function main(){
     await mongoose.connect(dbUrl);
@@ -27,8 +28,9 @@ app.get("/landingpage", (req,res)=>{
     res.render("commonpage/landingpage.ejs");
 })
 
-app.get("/browse", (req,res)=>{
-    res.render("client/findArtist.ejs");
+app.get("/browse", async (req,res)=>{
+    const artistProfile = await artistProfileSchema.find({});
+    res.render("client/findArtist.ejs" , {artistProfile});
 })
 
 app.get("/profile" , (req,res)=>{
@@ -37,6 +39,10 @@ app.get("/profile" , (req,res)=>{
 
 app.get("/servicepage" , (req,res)=>{
     res.render("client/service.ejs");
+})
+
+app.get("/signup" , (req,res)=>{
+    res.render("User/signup.ejs");
 })
 
 app.listen(4000, ()=>{

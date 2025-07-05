@@ -103,14 +103,15 @@
 
             <div class="artists-grid">
                 <!-- Artist Card 1 -->
+                <% for(let Artists of artistProfile){%>
                 <div class="artist-card">
                     <div class="artist-header">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fHww" alt="Sarah Chen" class="artist-avatar">
                         <div class="artist-info">
-                            <h3>Sarah Chen</h3>
+                            <h3><%= Artists.Name %></h3>
                             <div class="location">
                                 <i class="fas fa-map-marker-alt"></i>
-                                Los Angeles, CA
+                                <%= Artists.location %>
                             </div>
                         </div>
                         <div class="rating">
@@ -119,20 +120,23 @@
                         </div>
                     </div>
                     <div class="artist-status available">Available</div>
-                    <p class="artist-description">Award-winning 2D animator with 8+ years of experience in character animation...</p>
+                    <p class="artist-description"><%= Artists.description %></p>
+                    
                     <div class="artist-skills">
-                        <span class="skill-tag">2D Animation</span>
-                        <span class="skill-tag">Character Animation</span>
-                        <span class="skill-tag">Motion Graphics</span>
-                    </div>
+                        <% Artists.specializations.forEach(function(skill) { %>
+                          <span class="skill-tag"><%= skill %></span>
+                        <% }); %>
+                      </div>
                     <div class="artist-footer">
-                        <div class="price">Starting from $500</div>
+                        <div class="price">Starting from <%= Artists.Rate %></div>
                         <a href="/profile"><button class="view-profile-btn">View Profile</button></a>
                     </div>
                 </div>
+                <% } %>
+
 
                 <!-- Artist Card 2 -->
-                <div class="artist-card">
+                <!-- <div class="artist-card">
                     <div class="artist-header">
                         <img src="https://plus.unsplash.com/premium_photo-1661395238464-87a8f235e4e6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21pbGluZyUyMGZhY2V8ZW58MHx8MHx8fDA%3D" alt="Marcus Rivera" class="artist-avatar">
                         <div class="artist-info">
@@ -158,7 +162,7 @@
                         <div class="price">Starting from $750</div>
                         <button class="view-profile-btn">View Profile</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
