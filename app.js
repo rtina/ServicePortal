@@ -37,6 +37,12 @@ app.get("/profile" , (req,res)=>{
     res.render("commonpage/profile.ejs");
 });
 
+app.get("/profile/:id", async (req,res)=>{
+    const {id} = req.params;
+    const artistDetails = await artistProfileSchema.findById(id);
+    res.render("commonpage/profile.ejs", {artistDetails});
+});
+
 app.get("/servicepage" , (req,res)=>{
     res.render("client/service.ejs");
 })

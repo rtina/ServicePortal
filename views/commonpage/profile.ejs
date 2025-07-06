@@ -1,35 +1,36 @@
 <%- layout("/layouts/boilerplate") %>
 
 <!-- =========================== PROFILE SECTION =========================== -->
+
+
 <section class="profile-header">
   <div class="profile-info">
     <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fHww" alt="Marcus Rivera" class="profile-avatar">
     <div class="profile-details">
-      <h2>Marcus Rivera</h2>
+      <h2><%= artistDetails.Name %></h2>
       <div class="rating-location">
         <span class="rating"><i class="fas fa-star"></i> 4.8 (89 reviews)</span>
-        <span class="location"><i class="fas fa-map-marker-alt"></i> New York, NY</span>
+        <span class="location"><i class="fas fa-map-marker-alt"></i><%= artistDetails.location %></span>
       </div>
       <div class="profile-tags">
-        <span class="tag">3D Animation</span>
-        <span class="tag">VFX</span>
-        <span class="tag">Product Visualization</span>
+        <% artistDetails.specializations.forEach(function(skill) { %>
+          <span class="tag"><%= skill %></span>
+        <% }); %>
       </div>
       <p class="profile-bio">
-        Passionate 3D animator and visual effects artist. I create stunning 3D animations for commercials,
-        films, and digital content that captivate audiences.
+        <%= artistDetails.description %>
       </p>
       <div class="availability-meta">
         <span><i class="fas fa-clock"></i> Usually responds in 1 hour</span>
-        <span><i class="fas fa-dollar-sign"></i> From $750</span>
-        <span class="available">Available</span>
+        <span><i class="fas fa-dollar-sign"></i> From ₹<%= artistDetails.Rate %></span>
+        <span class="available"><%= artistDetails.availabilityStatus %></span>
       </div>
     </div>
   </div>
 
   <div class="profile-cta">
-    <h3>$95/hr</h3>
-    <p>Starting from $750</p>
+    <h3>₹95/hr</h3>
+    <p>Starting from ₹750</p>
     <button class="btn btn-primary">Contact Artist</button>
     <button class="btn btn-outline">Request Quote</button>
   </div>
