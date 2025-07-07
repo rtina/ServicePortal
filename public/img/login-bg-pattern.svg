@@ -1,0 +1,48 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E2E8F0;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#CBD5E0;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7B45E0;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#5A24C5;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Shapes -->
+  <circle cx="200" cy="200" r="150" fill="url(#grad1)" />
+  <circle cx="1720" cy="880" r="180" fill="url(#grad2)" />
+  <path d="M400 300 Q600 100 800 300 T1200 300" stroke="#7B45E0" stroke-width="2" fill="none" opacity="0.2" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="960" cy="540" r="5" fill="#FFB800" opacity="0.6" />
+  <circle cx="1000" cy="500" r="3" fill="#7B45E0" opacity="0.4" />
+  <circle cx="920" cy="580" r="4" fill="#38B2AC" opacity="0.5" />
+  
+  <!-- Abstract Shapes -->
+  <rect x="100" y="600" width="200" height="200" rx="20" fill="url(#grad2)" transform="rotate(-15 200 700)" />
+  <rect x="1600" y="200" width="180" height="180" rx="20" fill="url(#grad1)" transform="rotate(15 1690 290)" />
+  
+  <!-- Connecting Lines -->
+  <path d="M300 400 C400 300, 500 300, 600 400" stroke="#38B2AC" stroke-width="1.5" opacity="0.3" />
+  <path d="M1300 600 C1400 500, 1500 500, 1600 600" stroke="#7B45E0" stroke-width="1.5" opacity="0.3" />
+  
+  <!-- Dots Pattern -->
+  <g opacity="0.4">
+    <circle cx="800" cy="200" r="3" fill="#7B45E0" />
+    <circle cx="820" cy="220" r="3" fill="#7B45E0" />
+    <circle cx="840" cy="200" r="3" fill="#7B45E0" />
+    <circle cx="820" cy="180" r="3" fill="#7B45E0" />
+  </g>
+  <g opacity="0.4">
+    <circle cx="1100" cy="800" r="3" fill="#38B2AC" />
+    <circle cx="1120" cy="820" r="3" fill="#38B2AC" />
+    <circle cx="1140" cy="800" r="3" fill="#38B2AC" />
+    <circle cx="1120" cy="780" r="3" fill="#38B2AC" />
+  </g>
+  
+  <!-- Wave Patterns -->
+  <path d="M0 800 Q240 700 480 800 T960 800 T1440 800 T1920 800" stroke="#E2E8F0" stroke-width="2" fill="none" />
+  <path d="M0 850 Q240 750 480 850 T960 850 T1440 850 T1920 850" stroke="#CBD5E0" stroke-width="2" fill="none" opacity="0.5" />
+</svg>

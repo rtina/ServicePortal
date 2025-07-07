@@ -23,9 +23,19 @@ app.use(express.static(path.join(__dirname,"public")));
 
 
 //====================== routes =====================
+app.get("/login", (req, res) => {
+    res.render("commonpage/login.ejs");
+});
+
+app.post("/login", (req, res) => {
+    // Here you would typically validate credentials
+    // For now, we'll just redirect to landing page
+    res.redirect("/landingpage");
+});
+
 app.get("/landingpage", (req,res)=>{
     res.render("commonpage/landingpage.ejs");
-})
+});
 
 app.get("/browse", (req,res)=>{
     res.render("client/findArtist.ejs");
