@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname,"public")));
 
 //====================== routes =====================
 app.get("/login", (req, res) => {
-    res.render("commonpage/login.ejs");
+    res.render("User/login.ejs");
 });
 
 app.post("/login", (req, res) => {

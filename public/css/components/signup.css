@@ -14,19 +14,19 @@
   
   body {
     font-family: 'Inter', sans-serif;
-    background: #f9fafb;
+    background: url('/img/login-bg-pattern.svg') center/cover no-repeat;
     margin: 0;
     padding: 0;
     color: var(--text);
   }
   
   .register-container {
-    max-width: 400px;
     margin: 60px auto;
     background: #fff;
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 500px;
   }
   
   .logo-box {
@@ -107,11 +107,13 @@
     color: #888;
     cursor: pointer;
   }
-  
+ 
+
   .form-group.checkbox label {
     font-size: 0.9rem;
     font-weight: 400;
     color: var(--subtext);
+    display: inline;
   }
   
   .form-group.checkbox a {
