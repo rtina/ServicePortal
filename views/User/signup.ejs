@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account - AnimateHub</title>
+  <link rel="stylesheet" href="/css/components/signup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="register-container">
+    <div class="logo-box">
+      <div class="logo-icon">M</div>
+      <h1 class="brand">ManikarnikaStudios</h1>
+    </div>
+
+    <h2>Create your account</h2>
+    <p class="login-link">Already have an account? <a href="/login">Sign in</a></p>
+
+    <form class="register-form" action="/register" method="POST">
+      <div class="form-group">
+        <label for="role">I want to</label>
+        <select name="role" id="role">
+          <option value="hire">Hire animation talent</option>
+          <option value="work">Work as an animator</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group password-group">
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" placeholder="Create a password" required>
+          <i class="far fa-eye toggle-password" onclick="togglePassword(this, 'password')"></i>
+        </div>
+      </div>
+
+      <div class="form-group password-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+          <i class="far fa-eye toggle-password" onclick="togglePassword(this, 'confirmPassword')"></i>
+        </div>
+      </div>
+
+      <div class="form-group checkbox">
+        <label>
+          <input type="checkbox" required>
+          I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Create account</button>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword(icon, id) {
+      const input = document.getElementById(id);
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      icon.classList.toggle('fa-eye-slash', isPassword);
+    }
+  </script>
+</body>
+</html>

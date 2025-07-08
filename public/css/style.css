@@ -265,7 +265,7 @@ section[class^="landing-"] {
   background-color: #9333ea !important;
   color: white !important;
   border: none !important;
-  transition: background-color 0.3s ease 1;
+  transition: background-color 0.3s ease 1 !important;
 }
 
 .btn-primary-purple:hover {
@@ -313,12 +313,15 @@ section[class^="landing-"] {
 .landing-search-section .search-box {
   max-width: 800px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .landing-search-section .search-input {
   border-radius: 12px;
   overflow: hidden;
-  width: 100%;
+  width: 150%;
+  height: 50px;
+  
 }
 
 .landing-search-section .form-control {
@@ -329,6 +332,10 @@ section[class^="landing-"] {
 .landing-search-section .input-group-text {
   background: transparent;
   border: none;
+}
+.search-btn{
+  border-radius: 12px !important;
+  margin-right: 1rem !important;
 }
 
 /* ======= How It Works Section ======= */
